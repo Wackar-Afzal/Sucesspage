@@ -1,0 +1,208 @@
+*{
+  margin: 0;
+  border:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.confetti-container{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.confetti{
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+@keyframes right {
+  0% {
+    transform:  skew(0,0) translate(0,0) rotate(3deg) ;
+
+  }
+  50%{
+    transform:skew(-20deg ,-10deg) translate(5vw,50vh) rotate(-5deg) ;
+  }
+
+  100% {
+    transform:skew(-40deg,-10deg) translate(10vw,100vh) rotate(-7deg);
+  }
+}
+
+ @keyframes left {
+  0% {
+    transform:  skew(0,0) translate(0,0) rotate(3deg) ;
+
+  }
+  50%{
+    transform:skew(40deg ,10deg) translate(-16vw,50vh) rotate(15deg) ;
+  }
+
+  100% {
+    transform:skew(30deg,10deg) translate(-30vw,100vh) rotate(30deg);
+  }
+}      
+
+ @keyframes up {
+  0% {
+    transform:  skew(0,0) translate(0,0) rotate(3deg) ;
+
+  }
+  33%{
+    transform:skew(5deg ,10deg) translate(-5vw,33vh) rotate(5deg) ;
+  }
+  66%{
+    transform:skew(15deg ,10deg) translate(-10vw,66vh) rotate(20deg) ;
+  }
+
+  100% {
+    transform:skew(30deg,10deg) translate(-15vw,100vh) rotate(35deg);
+  }
+}        
+
+@keyframes bottom {
+  0% {
+    transform:  skew(0,0) translate(0,0) rotate(3deg) ;
+
+  }
+  50%{
+    transform:skew(20deg ,10deg) translate(-5vw,50vh) rotate(5deg) ;
+  }
+
+  100% {
+    transform:skew(40deg,10deg) translate(-10vw,100vh) rotate(7deg);
+  }
+}
+
+
+.congrats{
+  padding: 2rem;
+  position: absolute;
+  top:calc((100vh - 25rem)/2);
+  left:calc((100vw - 30rem)/2);
+  width: 30rem;
+  height: 25rem;
+  background-color: rgba(136, 12, 147, 0.8);
+  color: aliceblue;
+  z-index: 10;
+  box-shadow: 9px 10px 40px 9px rgba(0,0,0,0.38);
+  -webkit-box-shadow: 9px 10px 40px 9px rgba(0,0,0,0.38);
+  -moz-box-shadow: 9px 10px 40px 9px rgba(0,0,0,0.38);
+}
+
+
+.contain h1{
+	color: #f9f7fa;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+    color: rgb(164, 163, 163);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+    color: #f9f7fa;
+	}
+}
+
+
+.done{
+	width:100px;
+	height:100px;
+	position:relative;
+	left: 0;
+	right: 0;
+	margin:auto;
+  margin-bottom: 10px;
+}
+
+.circ{
+    opacity: 0;
+    stroke-dasharray: 130;
+    stroke-dashoffset: 130;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.tick{
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    -webkit-transition: stroke-dashoffset 1s 0.5s ease-out;
+    -moz-transition: stroke-dashoffset 1s 0.5s ease-out;
+    -ms-transition: stroke-dashoffset 1s 0.5s ease-out;
+    -o-transition: stroke-dashoffset 1s 0.5s ease-out;
+    transition: stroke-dashoffset 1s 0.5s ease-out;
+}
+.drawn svg .path{
+    opacity: 1;
+    stroke-dashoffset: 0;
+}
+
+.regards{
+	font-size:.7em;
+}
+
+@media (max-width:500px){
+	.congrats{
+    width: 20rem;
+    height: 25rem;
+    top:calc((100vh - 25rem)/2);
+    left:calc((100vw - 20rem)/2);
+  }
+}
+
+@media (max-width:410px){
+
+	
+
+	.congrats{
+    width: 90vw;
+    height: 25rem;
+    top:calc((100vh - 25rem)/2);
+    left:calc((100vw - 90vw)/2);
+  }
+
+
+	
+}

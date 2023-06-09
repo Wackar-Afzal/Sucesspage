@@ -1,0 +1,18 @@
+.parentClass{
+    width: 99vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.failedCOn{
+    padding: 2rem;
+    width: 30rem;
+    height: 25rem;
+    background-color: rgba(136, 12, 147, 0.8);
+    color: aliceblue;
+    z-index: 10;
+    box-shadow: 9px 10px 40px 9px rgba(0,0,0,0.38);
+    -webkit-box-shadow: 9px 10px 40px 9px rgba(0,0,0,0.38);
+    -moz-box-shadow: 9px 10px 40px 9px rgba(0,0,0,0.38);
+}
